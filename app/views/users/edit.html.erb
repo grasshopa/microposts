@@ -1,4 +1,5 @@
-<h1>Sign Up</h1>
+<% provide(:title, "Edit user") %>
+<h1>Update</h1>
 
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
@@ -21,7 +22,8 @@
 		  <%= f.label :password_confirmation, "Confirmation" %>
 		  <%= f.password_field :password_confirmation, class: 'form-control' %>
 		  
-		  <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+		  <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
 		<% end %> 
+
 	</div>
 </div>
