@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   #ユーザーが情報を入力してログインした後の画面
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.order(created_at:  :desc)
+    @microposts = @user.microposts.order(created_at: :desc)
   end
   
   def new
