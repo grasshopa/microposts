@@ -40,6 +40,20 @@ class UsersController < ApplicationController
     end
   end
 
+  #フォローとフォロワーの定義
+  
+  def followers
+    #誰（@user）のフォロワーかを特定
+    @user = User.find(params[:id])
+    #Userクラスに定義したhas_many〜の部分
+    @users = @user.follower_users
+  end
+  
+  def followings
+    @user  = User.find(params[:id])
+    @users = @user.following_users
+  end
+
   private
   
   def user_params
@@ -60,5 +74,7 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find(params[:id])
     redirect_to(root_url) unless @user == current_user
-  end  
+  end
+  
+
 end

@@ -182,3 +182,13 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+ul.user-list li {
+  width: 200px;
+  height: 70px;
+  list-style-type: none;
+  .gravatar {
+    width: 55px;
+    height: 55px;
+  }
+}

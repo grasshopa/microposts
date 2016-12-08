@@ -1,0 +1,16 @@
+<% @user ||= current_user %>
+<div class="status">
+  <div>
+  <!--※「_followings.html.erb名」_「user_path(@user)」 -->
+  <a href="<%= followings_user_path(@user) %>">
+    <!--UserConrollクラス/followingユーザーのカウント-->
+    Following&ensp;
+    <%= @user.following_users.count %>
+  </a>
+  &ensp;/&ensp;
+  <a href="<%= followers_user_path(@user) %>" >
+    Forrower&ensp;
+    <%= @user.follower_users.count %>
+  </a>
+  
+</div>
